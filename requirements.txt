@@ -1,0 +1,11 @@
+sentence-transformers==2.2.2
+langchain
+streamlit
+pypdf
+python-dotenv
+pinecone[gprc]
+langchain-pinecone
+langchain_community
+langchain-openai
+langchain-experimental
+-e .
