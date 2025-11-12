@@ -23,3 +23,10 @@ conda activate medibot
 ```bash
 pip install -r requirements.txt
 ```
+
+### Create a .env file in the root directory and add your Pinecone & Grok API Keys as follows:
+
+```bash
+PINECONE_API_KEY = "xxxxxxxxxxxxx"
+GROK_API_KEY = "xxxxxxxxxxxxxxx"
+```
