@@ -28,5 +28,5 @@ pip install -r requirements.txt
 
 ```bash
 PINECONE_API_KEY = "xxxxxxxxxxxxx"
-GROK_API_KEY = "xxxxxxxxxxxxxxx"
+GROQ_API_KEY = "xxxxxxxxxxxxxxx"
 ```
