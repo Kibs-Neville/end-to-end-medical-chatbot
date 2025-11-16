@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 from langchain_pinecone import PineconeVectorStore
 from langchain_groq import ChatGroq
-from langchain.chains import create_retrieval_chain
+from langchain.chains import RetrievalQA
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from src.helper import download_hugging_face_embeddings
@@ -48,7 +48,11 @@ prompt = ChatPromptTemplate.from_messages([
 
 # Create question-answer chain
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
-rag_chain = create_retrieval_chain(retriever, question_answer_chain)
+rag_chain = RetrievalQA.from_chain_type(
+    retriever=retriever,
+    chain_type="stuff",
+    return_source_documents=True
+)
 
 
 @app.route("/")
