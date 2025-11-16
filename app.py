@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 from langchain_pinecone import PineconeVectorStore
-from langchain_groq import ChatGroq
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
+from langchain.prompts import ChatPromptTemplate
 from src.helper import download_hugging_face_embeddings
 from src.prompt import system_prompt
 import os
