@@ -1,11 +1,12 @@
+langchain==1.0.7
+langchain_community==0.4.1
+langchain_pinecone==0.2.13
+langchain_text_splitters==1.0.0
+pinecone==8.0.0
+python-dotenv==1.2.1
 sentence-transformers==2.2.2
-langchain
-streamlit
 pypdf
-python-dotenv
-pinecone[gprc]
-langchain-pinecone
-langchain_community
 langchain-openai
 langchain-experimental
+
 -e .
